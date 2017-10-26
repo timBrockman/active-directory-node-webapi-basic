@@ -22,7 +22,7 @@ const authenticationStrategy = new BearerStrategy(config.credentials, (token, do
 
 passport.use(authenticationStrategy);
 
-const server = restify.createServer({ name: 'Azure Active Directroy with Node.js Demo' });
+const server = restify.createServer({ name: 'Azure Active Directory with Node.js Demo' });
 server.use(restifyPlugins.authorizationParser());
 server.use(passport.initialize());
 server.use(passport.session());
